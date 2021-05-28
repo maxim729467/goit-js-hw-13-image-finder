@@ -68,8 +68,6 @@ async function onFetchHandler(query, page, loader) {
     const getImages = await fetchPics(query, page, loader);
     addElemsToGallery(getImages);
 
-    console.log(getImages.hits.length);
-
     if (getImages.hits.length === 0) {
       const myNotice = alert({
         text: "No more images to fetch",

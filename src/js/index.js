@@ -29,6 +29,7 @@ function createMarkup() {
   if (query.length === 0) {
     gallery.innerHTML = "";
     document.body.style.overflow = "hidden";
+    observer.unobserve(document.querySelector(".observer-trigger"));
     return;
   }
 
